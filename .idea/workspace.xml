@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8bc6af1e-2991-489d-97bf-7f01fce8b721" name="Default" comment="" />
+    <list default="true" id="8bc6af1e-2991-489d-97bf-7f01fce8b721" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/templatemo-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/templatemo-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/homepage.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/homepage.ejs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,8 @@
       <workItem from="1552286843585" duration="3745000" />
       <workItem from="1575400998446" duration="9798000" />
       <workItem from="1575502122661" duration="3439000" />
-      <workItem from="1575505985462" duration="2815000" />
+      <workItem from="1575505985462" duration="3185000" />
+      <workItem from="1575518207759" duration="451000" />
     </task>
     <servers />
   </component>

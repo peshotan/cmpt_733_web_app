@@ -123,16 +123,16 @@ http://www.templatemo.com/tm-509-hydro
   .section-btn:hover,
   .section-btn:focus {
     background: #00F260;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0575E6, #ff0060);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0575E6, #ff0060); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, rgba(255, 90, 95,0.9), rgba(255, 78, 95,1));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(255, 90, 95,0.9), rgba(255, 78, 95,1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-color: transparent;
     color: #393939;
   }
 
   .overlay {
     background: #00F260;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0575E6, #ff0060);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0575E6, #ff0060); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, rgba(255, 90, 95,0.9), rgba(255, 90, 95,1));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(255, 90, 95,0.9), rgba(255, 90, 95,1)); /* W3C, IE 10+/ Edge, x 16+, Chrome 26+, Opera 12+, Safari 7+ */
     opacity: 0.7;
     position: absolute;
     width: 100%;
@@ -335,7 +335,7 @@ http://www.templatemo.com/tm-509-hydro
     overflow: hidden;
     padding-top: 10em;
     text-align: left;
-    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
   }
 
   #home h1 {
