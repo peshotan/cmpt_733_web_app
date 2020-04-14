@@ -31,57 +31,57 @@ app.use(expressSanitizer());
 
 
 //=========HomePage========
-app.get("/",(req,res)=>{
-    res.render("homepage");
-});
-
-
-app.get("/api/pred", (req, res) => {
-    getWeatherData(req, res);
-});
+// app.get("/",(req,res)=>{
+//     res.render("homepage");
+// });
+//
+//
+// app.get("/api/pred", (req, res) => {
+//     getWeatherData(req, res);
+// });
 
 
 
 //=========DashBoard============
-app.get("/dashboards/1", (req,res) => {
-    res.render("dashboards/dashboard1")
-});
-
-app.get("/dashboards/2", (req,res) => {
-    res.render("dashboards/dashboard2")
-});
-
-app.get("/dashboards/3", (req,res) => {
-    res.render("dashboards/dashboard3")
-});
-
-app.get("/dashboards/4", (req,res) => {
-    res.render("dashboards/dashboard4")
-});
-
-app.get("/dashboards/5", (req,res) => {
-    res.render("dashboards/dashboard5", {weatherData : "1"})
-});
+// app.get("/dashboards/1", (req,res) => {
+//     res.render("dashboards/dashboard1")
+// });
+//
+// app.get("/dashboards/2", (req,res) => {
+//     res.render("dashboards/dashboard2")
+// });
+//
+// app.get("/dashboards/3", (req,res) => {
+//     res.render("dashboards/dashboard3")
+// });
+//
+// app.get("/dashboards/4", (req,res) => {
+//     res.render("dashboards/dashboard4")
+// });
+//
+// app.get("/dashboards/5", (req,res) => {
+//     res.render("dashboards/dashboard5", {weatherData : "1"})
+// });
 
 // routes for new dashboard
 
-app.get("/dashboards/dashboard", (req,res) => {
+app.get("/", (req,res) => {
     res.render("links/blankNew")
 });
 
-app.get("/dashboards/generaltrends", (req,res) => {
+app.get("./generaltrends", (req,res) => {
     res.render("links/rose")
 });
 
-app.get("/dashboards/provincial", (req,res) => {
+app.get("./provincial", (req,res) => {
     res.render("links/provincial")
 });
 
-app.get("/dashboards/tables", (req,res) => {
+app.get("./tables", (req,res) => {
     res.render("links/tables")
 });
 
-app.get("/dashboards/averagedemand", (req,res) => {
+app.get("./averagedemand", (req,res) => {
     res.render("links/averagedemand")
 });
 

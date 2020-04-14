@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bc6af1e-2991-489d-97bf-7f01fce8b721" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/views/dashboards/dashboard5.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/links/averagedemand.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/links/blankNew.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/links/provincial.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/links/rose.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/sample.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/templatemo-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/templatemo-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/dashboards/dashboard1.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/dashboards/dashboard1.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/homepage.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/homepage.ejs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +78,7 @@
       <workItem from="1586378704039" duration="5909000" />
       <workItem from="1586555702141" duration="312000" />
       <workItem from="1586662719526" duration="1793000" />
-      <workItem from="1586751455711" duration="18093000" />
+      <workItem from="1586751455711" duration="18372000" />
     </task>
     <servers />
   </component>
