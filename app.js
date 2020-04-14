@@ -69,19 +69,19 @@ app.get("/", (req,res) => {
     res.render("links/blankNew")
 });
 
-app.get("./generaltrends", (req,res) => {
+app.get("/generaltrends", (req,res) => {
     res.render("links/rose")
 });
 
-app.get("./provincial", (req,res) => {
+app.get("/provincial", (req,res) => {
     res.render("links/provincial")
 });
 
-app.get("./tables", (req,res) => {
+app.get("/tables", (req,res) => {
     res.render("links/tables")
 });
 
-app.get("./averagedemand", (req,res) => {
+app.get("/averagedemand", (req,res) => {
     res.render("links/averagedemand")
 });
 
