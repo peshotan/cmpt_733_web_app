@@ -4,6 +4,23 @@ let express         = require("express"),
     flash           = require("connect-flash"),
     PORT            = process.env.PORT || 3004,
     expressSanitizer = require("express-sanitizer");
+    axios             = require("axios");
+
+
+let getWeatherData = async (req, res) => {
+    try{
+        const response = await axios.get("http://api.openweathermap.org/data/2.5/weather?id=2172797&appid=8456705436bca69bf9423d0bc84b778e");
+        // console.log(response);
+        console.log("SUCESSS******************");
+        let data = response.data;
+        console.log(data);
+        res.render('dashboards/dashboard5',  {weatherData : data});
+    } catch (err) {
+        console.log(err)
+    }
+};
+
+
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,6 +34,12 @@ app.use(expressSanitizer());
 app.get("/",(req,res)=>{
     res.render("homepage");
 });
+
+
+app.get("/api/pred", (req, res) => {
+    getWeatherData(req, res);
+});
+
 
 
 //=========DashBoard============
@@ -34,6 +57,32 @@ app.get("/dashboards/3", (req,res) => {
 
 app.get("/dashboards/4", (req,res) => {
     res.render("dashboards/dashboard4")
+});
+
+app.get("/dashboards/5", (req,res) => {
+    res.render("dashboards/dashboard5", {weatherData : "1"})
+});
+
+// routes for new dashboard
+
+app.get("/dashboards/dashboard", (req,res) => {
+    res.render("links/blankNew")
+});
+
+app.get("/dashboards/generaltrends", (req,res) => {
+    res.render("links/rose")
+});
+
+app.get("/dashboards/provincial", (req,res) => {
+    res.render("links/provincial")
+});
+
+app.get("/dashboards/tables", (req,res) => {
+    res.render("links/tables")
+});
+
+app.get("/dashboards/averagedemand", (req,res) => {
+    res.render("links/averagedemand")
 });
 
 

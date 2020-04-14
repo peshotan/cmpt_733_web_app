@@ -122,17 +122,17 @@ http://www.templatemo.com/tm-509-hydro
 
   .section-btn:hover,
   .section-btn:focus {
-    background: #00F260;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, rgba(255, 90, 95,0.9), rgba(255, 78, 95,1));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, rgba(255, 90, 95,0.9), rgba(255, 78, 95,1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgba(253, 92, 99, 1);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(253, 92, 99, 1), rgba(253, 80, 99, 1));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(253, 92, 99, 1), rgba(253, 92, 99, 1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-color: transparent;
     color: #393939;
   }
 
   .overlay {
-    background: #00F260;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, rgba(255, 90, 95,0.9), rgba(255, 90, 95,1));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, rgba(255, 90, 95,0.9), rgba(255, 90, 95,1)); /* W3C, IE 10+/ Edge, x 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgba(253, 92, 99, 1);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(253, 92, 99, 1), rgba(253, 92, 99, 1));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(253, 92, 99, 1), rgba(253, 92, 99, 1)); /* W3C, IE 10+/ Edge, x 16+, Chrome 26+, Opera 12+, Safari 7+ */
     opacity: 0.7;
     position: absolute;
     width: 100%;
@@ -568,9 +568,7 @@ http://www.templatemo.com/tm-509-hydro
   }
 
   .blog-info .section-btn:hover {
-    background: #00F260;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgba(253, 92, 99, 1);  /* fallback for old browsers */
     color: #ffffff;
   }
 
@@ -634,9 +632,7 @@ http://www.templatemo.com/tm-509-hydro
   -----------------------------------------*/
 
   #contact {
-    background: #00F260;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgba(253, 92, 99, 1);  /* fallback for old browsers */
   }
 
   #contact .section-title h2 {
