@@ -5,8 +5,33 @@ let express         = require("express"),
     PORT            = process.env.PORT || 3004,
     expressSanitizer = require("express-sanitizer");
     axios             = require("axios");
+    path = require('path');
+    cookieParser = require('cookie-parser');
+    logger = require('morgan');
+    spawn = require("child_process").spawn;
+    createError = require('http-errors');
 
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
+app.use(expressSanitizer());
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    next(createError(404));
+});
+
+//getting weather data
 let getWeatherData = async (req, res) => {
     try{
         const response = await axios.get("http://api.openweathermap.org/data/2.5/weather?id=2172797&appid=8456705436bca69bf9423d0bc84b778e");
@@ -23,10 +48,7 @@ let getWeatherData = async (req, res) => {
 
 
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/public"));
-app.use(expressSanitizer());
+
 
 
 
