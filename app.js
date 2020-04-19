@@ -3,13 +3,13 @@ let express         = require("express"),
     bodyParser      = require("body-parser"),
     flash           = require("connect-flash"),
     PORT            = process.env.PORT || 3004,
-    expressSanitizer = require("express-sanitizer");
-    axios             = require("axios");
-    path = require('path');
-    cookieParser = require('cookie-parser');
-    logger = require('morgan');
-    spawn = require("child_process").spawn;
-    createError = require('http-errors');
+    expressSanitizer= require("express-sanitizer");
+    axios           = require("axios");
+    path            = require('path');
+    cookieParser    = require('cookie-parser');
+    logger          = require('morgan');
+    spawn           = require("child_process").spawn;
+    createError     = require('http-errors');
 
 
 // view engine setup
@@ -31,59 +31,64 @@ app.use(function(req, res, next) {
     next(createError(404));
 });
 
+
+// error handler
+app.use(function(err, req, res, next) {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
+});
+
+
+
 //getting weather data
 let getWeatherData = async (req, res) => {
+    const API_KEY_WEATHER = "please add your API Key here";
     try{
-        const response = await axios.get("http://api.openweathermap.org/data/2.5/weather?id=2172797&appid=8456705436bca69bf9423d0bc84b778e");
+        const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?id=2172797&appid=${API_KEY_WEATHER}`);
         // console.log(response);
         console.log("SUCESSS******************");
         let data = response.data;
         console.log(data);
+        let url_prediction = `/model/pred?long=${data.long}&lat=${data.lat}&temp=${data.temperature}&prep=${data.precipitation}`
         res.render('dashboards/dashboard5',  {weatherData : data});
     } catch (err) {
         console.log(err)
     }
 };
 
+// predictions
+app.get('/model/pred', (req, res) => {
+    let n = req.query.long;
+    let m = req.query.lat;
+    let o = req.query.temp;
+    let q = req.query.prep;
 
+    //name of the model
+    let name_of_mode = "file_name_containing the model";
 
+    //path to model
+    url_model = `./pythonModels/${name_of_model}`;
 
+    //pass the parameters to
+    var process = spawn('python',[`./python/${name_of_model}`, n, m, o, q] );
 
-
-
-
+    process.stdout.on('data', data=> {
+        let d = data.toString();
+        let c = JSON.parse(d);
+        res.json({"your answer is" : c})
+    });
+});
 //=========HomePage========
-// app.get("/",(req,res)=>{
-//     res.render("homepage");
-// });
-//
-//
+
 // app.get("/api/pred", (req, res) => {
 //     getWeatherData(req, res);
 // });
-
-
-
-//=========DashBoard============
-// app.get("/dashboards/1", (req,res) => {
-//     res.render("dashboards/dashboard1")
-// });
 //
-// app.get("/dashboards/2", (req,res) => {
-//     res.render("dashboards/dashboard2")
-// });
-//
-// app.get("/dashboards/3", (req,res) => {
-//     res.render("dashboards/dashboard3")
-// });
-//
-// app.get("/dashboards/4", (req,res) => {
-//     res.render("dashboards/dashboard4")
-// });
-//
-// app.get("/dashboards/5", (req,res) => {
-//     res.render("dashboards/dashboard5", {weatherData : "1"})
-// });
 
 // routes for new dashboard
 
